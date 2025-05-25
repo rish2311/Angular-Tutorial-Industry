@@ -9,10 +9,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  items = [
-    new WishItem('To Learn Angular'),
-    new WishItem('Get Coffee', true),
-    new WishItem('Find grass that cuts itself')
+  // Isse error to nhi aayega but data bhi nhi dikhega.
+  items : WishItem[] = [
+    // new WishItem('To Learn Angular'),
+    // new WishItem('Get Coffee', true),
+    // new WishItem('Find grass that cuts itself')
   ];
   title = 'wishlist';
 }
