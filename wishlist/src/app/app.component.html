@@ -2,7 +2,7 @@
   <div *ngIf="items.length === 0; else showItems">
     There is nothing to display.
   </div>
-  
+
 <!-- ITERATING tHE Arrays -->
     <!-- {{ items[0].wishText}} -->
 
@@ -11,10 +11,16 @@
     <!-- Inside For Loop, we have: -->
       <!-- for(Intialization, Condition, Iteration) -->
     <ul class="wish-list">
-      <li *ngFor="let item of items">
+      <li *ngFor="let item of items; index as ii">
         <div class="form-check">
           <label class="form-check-label">
-            <input class="checkbox" type="checkbox"> 
+            <input 
+            class="checkbox" 
+            type="checkbox"
+            [checked]="item.isComplete"
+            [attr.data-index]="ii"
+            (click)="toggleItem(item)"
+            > 
             {{ item.wishText}}
           </label>
         </div>
