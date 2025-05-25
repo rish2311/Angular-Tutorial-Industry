@@ -1,10 +1,8 @@
 <div class="container">
-  <div *ngIf="items.length === 0; then noItems else showItems"></div>
-
-  <ng-template #noItems>
+  <div *ngIf="items.length === 0; else showItems">
     There is nothing to display.
-  </ng-template>
-
+  </div>
+  
 <!-- ITERATING tHE Arrays -->
     <!-- {{ items[0].wishText}} -->
 

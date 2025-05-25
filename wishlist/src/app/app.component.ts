@@ -11,9 +11,9 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   // Isse error to nhi aayega but data bhi nhi dikhega.
   items : WishItem[] = [
-    // new WishItem('To Learn Angular'),
-    // new WishItem('Get Coffee', true),
-    // new WishItem('Find grass that cuts itself')
+    new WishItem('To Learn Angular'),
+    new WishItem('Get Coffee', true),
+    new WishItem('Find grass that cuts itself')
   ];
   title = 'wishlist';
 }
